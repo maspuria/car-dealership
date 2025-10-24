@@ -57,6 +57,7 @@ public class Vehicle {
     public double getPrice() {
         return price;
     }
+
     // setters
     public void setVin(int vin) {
         this.vin = vin;
@@ -91,8 +92,6 @@ public class Vehicle {
     }
 
     // toString() to display the vehicle data transactions
-
-
     @Override
     public String toString() {
         return vin + "|" + year + "|" + make + "|" + model +
