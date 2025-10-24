@@ -9,4 +9,11 @@ public class Dealership {
     private String phoneNumber;
     private ArrayList<Vehicle> vehicles;
 
+    // constructor
+    public Dealership(String name, String address, String phoneNumber, ArrayList<Vehicle> vehicles) {
+        this.name = name;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.vehicles = new ArrayList<>();
+    }
 }
