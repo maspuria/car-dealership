@@ -57,5 +57,46 @@ public class Vehicle {
     public double getPrice() {
         return price;
     }
+    // setters
+    public void setVin(int vin) {
+        this.vin = vin;
+    }
 
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setOdometer(int odometer) {
+        this.odometer = odometer;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    // toString() to display the vehicle data transactions
+
+
+    @Override
+    public String toString() {
+        return vin + "|" + year + "|" + make + "|" + model +
+                "|" + vehicleType + "|" + color + "|" +
+                odometer + "|" + price ;
+    }
 }
