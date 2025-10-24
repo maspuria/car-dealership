@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Dealership {
     // field members
@@ -32,6 +33,46 @@ public class Dealership {
 
     public ArrayList<Vehicle> getVehicles() {
         return vehicles;
+    }
+
+    // overloaded methods
+    public ArrayList<Vehicle> getVehiclesByPrice(double min, double max) {
+        return null; //temporary
+    }
+
+    public List<Vehicle> getVehiclesByMakeModel(String make, String model) {
+        return null; //temporary
+    }
+
+    public List<Vehicle> getVehiclesByYear(int min, int max) {
+        return null; //temporary
+    }
+
+    public List<Vehicle> getVehiclesByColor(String color) {
+        return null; //temporary
+    }
+
+    public List<Vehicle> getVehiclesByMileage(int min, int  max) {
+        return null; //temporary
+    }
+
+    public List<Vehicle> getVehiclesByType(String vehicleType) {
+        return null; //temporary
+    }
+
+    // method to display all vehicles in the transaction.csv file
+    public List<Vehicle> getAllVehicles() {
+        return null; //temporary
+    }
+
+    // method to add vehicles to the transaction.csv file
+    public void addVehicle(Vehicle vehicle) {
+
+    }
+
+    //method to remove a vehicle data transaction from teh transaction.csv file
+    public void removeVehicle(Vehicle vehicle) {
+
     }
 
 }
