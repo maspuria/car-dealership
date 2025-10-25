@@ -11,7 +11,7 @@ public class Dealership {
     private ArrayList<Vehicle> vehicles;
 
     // constructor
-    public Dealership(String name, String address, String phoneNumber, ArrayList<Vehicle> vehicles) {
+    public Dealership() {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -62,12 +62,12 @@ public class Dealership {
 
     // method to display all vehicles in the transaction.csv file
     public List<Vehicle> getAllVehicles() {
-        return null; //temporary
+        return vehicles; // to return the list of vehicle objects
     }
 
     // method to add vehicles to the transaction.csv file
     public void addVehicle(Vehicle vehicle) {
-
+        vehicles.add(vehicle);
     }
 
     //method to remove a vehicle data transaction from teh transaction.csv file
