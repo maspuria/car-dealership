@@ -2,19 +2,25 @@ package com.pluralsight;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.ArrayList;
 
 public class DealershipFileManager {
 
     // method to read the inventory.csv file
     public Dealership getDealership() {
-        Dealership dealership = new Dealership();
+        Dealership dealership = null;
         try {
             BufferedReader reader = new BufferedReader(new FileReader("inventory.csv"));
             String line;
-            reader.readLine(); // important to skip the dealership header of the inventory.csv file
 
-//            ArrayList<Vehicle> vehicles = new ArrayList<>();
+            String dealershipInformation = reader.readLine(); // reads the first line (dealership header information)
+            if (dealershipInformation != null) {
+                String[] partsOfDealershipInfo = dealershipInformation.split("\\|");
+                String name = partsOfDealershipInfo[0].trim();
+                String address = partsOfDealershipInfo[1].trim();
+                String phoneNumber = partsOfDealershipInfo[2].trim();
+
+                dealership = new Dealership();
+            }
 
             while ((line = reader.readLine()) != null) { // keeps reading until readLine() returns null
                 String[] partsOfVehicleData = line.split("\\|");
@@ -29,8 +35,6 @@ public class DealershipFileManager {
                     double price = Double.parseDouble(partsOfVehicleData[7].trim()); // parse price string to double
 
                     //creates a new vehicle data transaction object with this data and adds it to the ArrayList
-//                    Vehicle vehicle = new Vehicle(vin,year,make, model, vehicleType, color, odometer, price);
-//                    vehicles.add(vehicle);
                     dealership.addVehicle(new Vehicle(vin,year,make, model, vehicleType, color, odometer, price));
                 }
             }
@@ -41,8 +45,6 @@ public class DealershipFileManager {
         }
         return dealership;
     }
-
     public void saveDealership() {
-
     }
 }
